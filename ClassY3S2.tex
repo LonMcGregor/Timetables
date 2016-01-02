@@ -1,0 +1,77 @@
+\documentclass[a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[top=0.1in, bottom=0.1in, right=0.1in, left=0.1in, landscape]{geometry}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{array}
+\usepackage{colortbl}
+
+\definecolor{cfn}{HTML}{F9AD89}
+\definecolor{clp}{HTML}{F4A4F9}
+\definecolor{cos}{HTML}{A4E8F9}
+\definecolor{cpd}{HTML}{C4F9A4}
+
+\newcommand{\courseCell}[5]{
+  \cellcolor{#1}
+  \centering\arraybackslash
+  \begin{tabular}{c}
+    \\#2\\\\#3\\\\\textbf{#4}\\\\#5\\
+  \end{tabular}
+}
+
+\newcommand{\fn}[1]{
+  \courseCell{cfn}{F29FB}{Foundations II}{#1}{Dr J. Wells}
+}
+
+
+\newcommand{\lp}[1]{
+  \courseCell{clp}{F29LP}{Language\\Processors}{#1}{Dr G. Grov\\Dr J. Gabbay}
+}
+
+
+\newcommand{\os}[1]{
+  \courseCell{cos}{F29OC}{Operating Sys \&\\ Concurrency}{#1}{Prof S.B. Scholz}
+}
+
+
+\newcommand{\pd}[1]{
+  \courseCell{cpd}{F29PD}{Professional\\Development}{#1}{Prof N. Taylor}
+}
+
+\pdfinfo{%
+  /Title    (HW MACS Y3 S2 2016 Timetable)
+  /Author   (L\'{e}on McGregor)
+  /Creator  ()
+  /Producer ()
+  /Subject  ()
+  /Keywords ()
+}
+
+\begin{document}
+
+\begin{tabular}{lr}
+\begin{tabular}{c|m{3cm}|m{3cm}|m{3cm}|m{3cm}|m{3cm}|m{3cm}|}
+\cline{2-7}
+ & 0915 & 1015 & 1115 & 1215 & 1315 & 1415 \\
+\hline
+M &  &  &  &  & \fn{DB114} & \lp{EM336} \\
+\hline
+T &  & \lp{EM244} & \multicolumn{2}{c}{ \os{EM336} } &  & \lp{EM250 \textbar {} EM182} \\
+\hline
+W &  & \pd{EM183} & \fn{EM183} & \multicolumn{2}{c}{ \os{EM250} } &  \\
+\hline
+T & \multicolumn{2}{c}{ \lp{EM250 \textbar {} EM245} } &  & \pd{EM336} & \fn{EM182} &  \\
+\hline
+\end{tabular}
+&
+\begin{tabular}{c|c|c|c|c} 
+\textbf{OUT} & \textbf{Train} & \textbf{x54} & \textbf{x59} & \textbf{ARR}\\
+\hline
+GLN & . & . & . & EDI
+\end{tabular}
+
+\end{tabular}
+\\\\\\
+\textbf{Heriot-Watt MACS Computer Science Year 3 Semester 2 Timetable From Jan 11 2016}
+
+\end{document}
