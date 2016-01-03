@@ -38,6 +38,31 @@
   \courseCell{cpd}{F29PD}{Professional\\Development}{#1}{Prof N. Taylor}
 }
 
+\newcommand{\train}[3]{
+  MNC & #1 & #2 & #3 \\
+}
+
+\newcommand{\trainr}[3]{
+  #1 & HYM & #2 & #3 \\
+}
+
+\newcommand{\busf}[3]{
+  x54 & #1 & #2 & #3 \\
+}
+
+\newcommand{\busn}[3]{
+  x59 & #1 & #2 & #3 \\
+}
+
+\newcommand{\busfr}[3]{
+  #1 & x54 & #2 & #3 \\
+}
+
+\newcommand{\busnr}[3]{
+  #1 & x59 & #2 & #3 \\
+}
+
+
 \pdfinfo{%
   /Title    (HW MACS Y3 S2 2016 Timetable)
   /Author   (L\'{e}on McGregor)
@@ -50,28 +75,80 @@
 \begin{document}
 
 \begin{tabular}{lr}
-\begin{tabular}{c|m{3cm}|m{3cm}|m{3cm}|m{3cm}|m{3cm}|m{3cm}|}
-\cline{2-7}
- & 0915 & 1015 & 1115 & 1215 & 1315 & 1415 \\
-\hline
-M &  &  &  &  & \fn{DB114} & \lp{EM336} \\
-\hline
-T &  & \lp{EM244} & \multicolumn{2}{c}{ \os{EM336} } &  & \lp{EM250 \textbar {} EM182} \\
-\hline
-W &  & \pd{EM183} & \fn{EM183} & \multicolumn{2}{c}{ \os{EM250} } &  \\
-\hline
-T & \multicolumn{2}{c}{ \lp{EM250 \textbar {} EM245} } &  & \pd{EM336} & \fn{EM182} &  \\
-\hline
-\end{tabular}
-&
-\begin{tabular}{c|c|c|c|c} 
-\textbf{OUT} & \textbf{Train} & \textbf{x54} & \textbf{x59} & \textbf{ARR}\\
-\hline
-GLN & . & . & . & EDI
-\end{tabular}
+  \begin{tabular}{c|m{3cm}|m{3cm}|m{3cm}|m{3cm}|m{3cm}|m{3cm}|}
+    \cline{2-7}
+    & 0915 & 1015 & 1115 & 1215 & 1315 & 1415 \\
+    \hline
+    M &  &  &  &  & \fn{DB114} & \lp{EM336} \\
+    \hline
+    T &  & \lp{EM244} & \multicolumn{2}{c}{ \os{EM336} } &  & \lp{EM250 \textbar {} EM182} \\
+    \hline
+    W &  & \pd{EM183} & \fn{EM183} & \multicolumn{2}{c}{ \os{EM250} } &  \\
+    \hline
+    T & \multicolumn{2}{c}{ \lp{EM250 \textbar {} EM245} } &  & \pd{EM336} & \fn{EM182} &  \\
+    \hline
+  \end{tabular}
+  &
+
+  \begin{tabular}{l}
+
+    \begin{tabular}{c|c|c|c} 
+      \textbf{OUT} & \textbf{DEP} & \textbf{ARR} & \textbf{RIC}\\
+      \hline
+      \train{0711}{0800}{9}
+      \train{0737}{0819}{9}
+      \train{0747}{0840}{10}
+      \train{0812}{0859}{10}
+      \train{0831}{0918}{10}
+      \train{0904}{0953}{11}
+      \train{1009}{1051}{12}
+      \train{1018}{1108}{12}
+      \train{1031}{1120}{12}
+      \train{1108}{1151}{13}
+      \train{1132}{1217}{13}
+      \hline
+      \busf{0655}{0808}{9}
+      \busn{0730}{0838}{10}
+      \busf{0752}{0903}{10}
+      \busn{0815}{0918}{10}
+      \busf{0857}{1003}{11}
+      \busn{xz25}{xx23}{xy}
+      \busf{xz00}{xx03}{xy}
+      & & & \\
+      \textbf{RIC} & \textbf{IN} & \textbf{DEP} & \textbf{ARR}\\
+      \hline
+      \trainr{xx}{xx40}{xy20}
+      \trainr{xx}{xx04}{xx44}
+      \trainr{16}{1638}{1718}
+      \trainr{16}{1704}{1746}
+      \hline
+      \busnr{xz}{xx37}{xy40}
+      \busfr{xz}{xx57}{xy05}
+      \busnr{15}{1558}{1710}
+      \busfr{16}{1644}{1755}
+      \hline
+    \end{tabular}
+
+    \\
+
+    \begin{tabular}{c|c|c|c}
+      & & & \\
+      \textbf{BUS} & \textbf{FRM} & \textbf{TO} & \textbf{COST}\\
+      SINGLE & PRE & 0900 & 9.20\\
+      DAYRD + & PRE & 0900 & 10.40\\
+      DAY RTN & 0900 & ON & 7.00\\
+      & & & \\
+      \textbf{TRAIN} & \textbf{FRM} & \textbf{TO} & \textbf{COST}\\
+      OP RTN & PRE & 1000 & 11.40\\
+      16+ ANYDR & PRE & 1000 & 12.95\\
+      16+ OPRTN & 1000 & 1700 & 7.55\\
+    \end{tabular}
+
+  \end{tabular}
 
 \end{tabular}
-\\\\\\
+
+\par\vspace{1cm}
 \textbf{Heriot-Watt MACS Computer Science Year 3 Semester 2 Timetable From Jan 11 2016}
 
 \end{document}
